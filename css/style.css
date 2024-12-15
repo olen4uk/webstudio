@@ -1,4 +1,20 @@
+:root {
+	--iris: #4d5ae5;
+	--ocean: #404bbf;
+	--navy-blue: #2e2f42;
+	--green: #31d0aa;
+	--slate: #434455;
+	--light-slate: #8e8f99;
+	--cornflower: #e7e9fc;
+	--cloud: #f4f4fd;
+	--navy-blue-modal: rgba(46, 47, 66, 0.4);
+	--grey: rgba(46, 47, 66, 0.7);
+	--white: #fff;
+	--dairy: #fcfcfc;
 
+    --font-family: "Roboto", sans-serif;
+    --second-family: "Raleway", sans-serif;
+}
 
 .container {
     width: 320px;
@@ -31,6 +47,10 @@
     color:#4D5AE5;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
+    font-size: 18px;
+    line-height: 117%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 .head-logo-span {
     color: black;
@@ -45,6 +65,81 @@
     background-size: contain;
     cursor: pointer;
 }
+.head-nav {
+    display: none;
+}
+@media (min-width:768px){
+    .head-content{
+        height: 72px;
+    }
+    .head_burger-btn {
+        display: none;
+    }
+    .head-nav{
+        height: 100%;
+        display: flex;
+        column-gap: 122px;
+        align-items: center;
+    }
+    .head-menu{
+        height: 100%;
+        display: flex;
+        column-gap: 40px;
+    }
+    .head-menu-item {
+        height: 100%;
+    }
+    .head-menu-link {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: var(--navy-blue);
+        position: relative;
+    }
+    .head-menu-link:hover {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: var(--ocean);
+    }
+    .head-menu-link:hover::after {
+        content: "";
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+        background: var(--ocean);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .head-address{
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+    .head-address-link {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 117%;
+        letter-spacing: 0.04em;
+        color: var(--slate);
+    }
+    .head-address-link:hover{
+        color: var(--ocean);
+    }
+    
+}
+
+
 
 /* Header style end */
 
@@ -131,6 +226,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 72px;
+    column-gap: 24px;
 }
 .feature-card {
     width: 288px;
@@ -170,14 +267,12 @@
 }
 
 .feature p {
-    margin-left: 16px;
-    margin-right:16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
     font-family: "Roboto", sans-serif;
-    padding-bottom: 72px;
+    /* padding-bottom: 72px; */
 }
 @media (min-width: 768px) {
     .feature-list {
@@ -186,7 +281,10 @@
         justify-content: center;
     }
     .feature-card {
-        width: 358px;
+        width: 356px;
+    }
+    .feature h1 {
+        text-align: left;
     }
 }
 .feature-card-img {
@@ -205,12 +303,10 @@
 
 .our-team {
     text-align: center;
-    height: 2232px;
+    padding:82px 0 96px;
     background-color: #F4F4FD;
-    
 }
 .main-title {
-    padding-top:72px;
     padding-bottom: 64px;
     font-weight: 700;
     font-size: 36px;
@@ -225,11 +321,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    row-gap: 72px;
 }
 .team-card {
     width: 264px;
-    margin-bottom: 62px;
     background-color: white;
 }
 
@@ -286,15 +381,16 @@
         flex-wrap: wrap;
         justify-content: center;
         column-gap: 24px;
+        row-gap:64px;
     }
     .our-team {
-        height: 1200px;
-}
+        padding: 96px 0;
+    }
 }
 
 /* portfolio star */
 .portfolio {
-    padding-bottom: 96px;
+    padding:96px 0;
 }
 .portfolio-list {
     display: flex;
@@ -364,6 +460,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 24px;
+        row-gap: 72px;
     }
 }
 
@@ -486,7 +583,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 24px;
-        padding-left:108px ;
+        padding-left:108px;
 }
     .foot-text {
         width: 264px;
@@ -510,3 +607,5 @@
         column-gap: 24px;
     }
 }
+
+
