@@ -121,23 +121,24 @@
         left: 0;
         right: 0;
     }
-    .head-address{
-        display: flex;
-        flex-direction: column;
-        row-gap: 12px;
-    }
-    .head-address-link {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 117%;
-        letter-spacing: 0.04em;
-        color: var(--slate);
-    }
-    .head-address-link:hover{
-        color: var(--ocean);
-    } 
+    
 }
+.head-address{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+.head-address-link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.04em;
+    color: var(--slate);
+}
+.head-address-link:hover{
+    color: var(--ocean);
+} 
 @media (min-width:1280px){
     .head-nav{
         column-gap: 332px;
@@ -148,6 +149,69 @@
     }
 }
 
+
+
+.backdrop {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top:0;
+    left:0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+}
+.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+.backdrop-wrap {
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+}
+.backdrop-close {
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/svg/close.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+    position: absolute;
+    top:24px;
+    right: 24px;
+}
+.back-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.back-menu-link {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--navy-blue);
+}
+.back-menu-link:hover {
+    color: var(--ocean);
+}
+.back-address-link {
+    font-size: 20px;
+}
+.back-address {
+    margin-bottom: 48px;
+}
 
 
 
@@ -511,6 +575,8 @@
 .foot-social  {
     font-weight: 500;
     font-size: 16px;
+    width: 208px;
+    margin: 0 auto;
     line-height: 150%;
     letter-spacing: 0.02em;
     color: #F4F4FD; 
@@ -531,10 +597,10 @@
 .foot-social_link:hover {
     background-color: #31D0AA;
 }
-.foot-social ul {
+.foot-social-ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     gap: 16px;
     padding-top: 16px;
 }
