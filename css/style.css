@@ -62,20 +62,6 @@
     /* flex-direction: column; */
     color: #ffffff;
 }
-@media (min-resolution: 192dpi) {
-    .hero {
-        background: linear-gradient(rgba(46,47,66,.7), rgba(46,47,66,.7)), 
-                url('../img/Dark-bg@2x.jpg');
-                background-position: center;
-                background-repeat: no-repeat;
-            background-size: cover;
-    }
-}
-@media (min-width: 1280px) {
-    .hero {
-        height: 600px;
-    }
-}
 
 .hero h1 {
     width: 216px;
@@ -109,6 +95,31 @@
     font-weight: 500;
     font-family: "Roboto", sans-serif;
 }
+@media (min-width:768px) {
+    .hero h1 {
+        width: 496px;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 107%;
+        letter-spacing: 0.02em;
+        text-align: center;
+    }
+}
+@media (min-resolution: 192dpi) {
+    .hero {
+        background: linear-gradient(rgba(46,47,66,.7), rgba(46,47,66,.7)), 
+                url('../img/Dark-bg@2x.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+            background-size: cover;
+    }
+}
+@media (min-width: 1280px) {
+    .hero {
+        height: 600px;
+    }
+}
+
 
 /* HERO STYLES END */
 
@@ -123,6 +134,50 @@
 }
 .feature-card {
     width: 288px;
+}
+/* @media (min-width: 768px) {
+    .feature-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .feature-card {
+        width: 358px;
+    }
+}
+.feature-card-img {
+    display: none;
+}
+@media (min-width: 1280px) {
+    .feature-card {
+        width: 264px;
+    }
+    .feature-card-img {
+        display: block;
+        margin-bottom: 24px;
+    }
+} */
+.feature h1 {
+    color: #2E2F42;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+}
+
+.feature p {
+    margin-left: 16px;
+    margin-right:16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 72px;
 }
 @media (min-width: 768px) {
     .feature-list {
@@ -145,28 +200,6 @@
         display: block;
         margin-bottom: 24px;
     }
-}
-.feature h1 {
-    color: #2E2F42;
-    text-align: center;
-    margin-bottom: 8px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 111%;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    font-family: "Roboto", sans-serif;
-}
-
-.feature p {
-    margin-left: 16px;
-    margin-right:16px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.02em;
-    font-family: "Roboto", sans-serif;
-    padding-bottom: 72px;
 }
 /* Feature styles end */
 
@@ -247,6 +280,18 @@
 
 }
 
+@media (min-width:768px) {
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 24px;
+    }
+    .our-team {
+        height: 1200px;
+}
+}
+
 /* portfolio star */
 .portfolio {
     padding-bottom: 96px;
@@ -313,7 +358,14 @@
     color: #434455;
     font-family: "Roboto", sans-serif;
 }
-
+@media (min-width:768px) {
+    .portfolio-list {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+    }
+}
 
 /* footer start */
 .foot {
@@ -428,4 +480,33 @@
 }
 .foot-form-button:hover {
     background-color:#404BBF;
+}
+@media (min-width:768px) {
+    .foot-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        padding-left:108px ;
+}
+    .foot-text {
+        width: 264px;
+        height: 112px;
+        text-align: left;
+    }   
+    .foot-social {
+        width: 208px;
+        height: 80px;
+        text-align: left;
+    }
+    .foot-form-box {
+        width: 453px;
+        height: 80px;
+    }
+    .foot-form-title{
+        text-align: left;
+    }
+    .foot-form {
+        flex-direction: row;
+        column-gap: 24px;
+    }
 }
